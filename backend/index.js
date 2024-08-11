@@ -1,7 +1,11 @@
-import express from 'express'
 import path from 'path';
-const app = express();
+import { fileURLToPath } from 'url';
+import express from 'express';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Serve static files from the Vite build
