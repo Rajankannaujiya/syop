@@ -1,11 +1,13 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import cors from 'cors'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+app.use(cors())
 const PORT = process.env.PORT || 5000;
 
 // Serve static files from the Vite build
@@ -13,7 +15,7 @@ app.use(express.static(path.join(__dirname, '../syop-fronted/dist')));
 
 // Example API endpoint
 app.get('/api/hello', (req, res) => {
-    res.json({ message: 'Hello from Express!' });
+    res.send({ message: 'Hello from Express!' });
 });
 
 // Serve Vite app for any other route

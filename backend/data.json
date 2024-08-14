@@ -1,0 +1,44 @@
+
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "age": 30,
+        "email": "john@example.com"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "age": 25,
+        "email": "jane@example.com"
+      }
+    ],
+    "products": [
+      {
+        "id": 101,
+        "name": "Product A",
+        "price": 50
+      },
+      {
+        "id": 102,
+        "name": "Product B",
+        "price": 75
+      }
+    ],
+
+    "address": [
+      {
+        "id": 23,
+        "address": "abc",
+        "address2": "xyz"
+
+      },
+      {
+        "id": 24,
+        "address": "abc2",
+        "address2": "xyz2"
+      }
+    ]
+  }
+  

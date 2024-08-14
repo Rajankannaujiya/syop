@@ -1,0 +1,34 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex JSON Data</title>
+  <style>
+    li{
+        color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Users:</h1>
+  <ul>
+    <% data.users.forEach(user => { %>
+      <li>Name: <%= user.name %>, Age: <%= user.age %>, Email: <%= user.email %></li>
+    <% }); %>
+  </ul>
+  <h1>Products:</h1>
+  <ul>
+    <% data.products.forEach(product => { %>
+      <li>Name: <%= product.name %>, Price: <%= product.price %></li>
+    <% }); %>
+    </ul>
+    <h1>address</h1>
+    <ul>
+      <% data.address.forEach(address=> { %>
+    <li>id: <%= address.id %>, address: <%=address.address %>, address2: <%= address.address2 %>    </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
