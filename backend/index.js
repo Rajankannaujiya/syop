@@ -1,6 +1,8 @@
 import express from 'express'
-import {user} from './components/auth.js'
+import {user} from './userAuth/auth.js'
 import cors from 'cors'
+import { post } from './components/posts/post.js';
+import {userMiddleware} from "./middleware/userMiddleware.js"
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -14,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.use("/api/v1/user",user)
+app.use("/api/v1/user/post",post)
 
 
 
